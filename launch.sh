@@ -1,3 +1,3 @@
 #!/bin/sh
-chown -R spacecookie:spacecookie /srv/gopher
+nohup /usr/sbin/sshd -D >/dev/null 2>&1 &
 spacecookie /etc/spacecookie.json

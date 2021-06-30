@@ -4,7 +4,7 @@
     "addr" : "::",
     "port" : 70
   },
-  "user" : "spacecookie",
+  "user" : "git",
   "root" : "/srv/gopher",
   "log" : {
     "enable" : true,

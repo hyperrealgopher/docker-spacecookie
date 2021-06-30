@@ -28,3 +28,34 @@ like this:
 ```
 docker build --no-cache -t spacecookie .
 ```
+
+## With git and burrow
+
+Put `id_rsa.pub` to be used for your git server in the working directory...
+
+You can push to a `git` repo that automatically builds with `burrow`...
+
+```
+# on John's computer
+$ cd myproject
+$ git init
+$ git add .
+$ git commit -m 'Initial commit'
+$ git remote add origin git@172.18.0.69:/srv/git/gopherhole.git
+$ git push origin master
+```
+
+https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+
+```
+
+
+At this point, the others can clone it down and push changes back up just as easily:
+
+$ git clone git@gitserver:/srv/git/project.git
+$ cd project
+$ vim README
+$ git commit -am 'Fix for README file'
+$ git push origin master
+
+```
